@@ -1,0 +1,44 @@
+﻿body {
+opacity:0.6
+ 
+}
+
+#forminfo
+{    
+  margin-top:50px;       
+}
+#formforget
+{      
+  margin-top:10px;        
+}
+
+input.ng-invalid.ng-dirty
+{
+   background-color:#FA787E;
+}
+input.ng-valid
+{
+    background-color:#78FA89;
+}
+button:hover
+{
+    background-color:red;   
+}
+.panel
+{
+    opacity:2
+}
+.modal-header .close {
+    float: right !important;
+    margin-right: -30px !important;
+    margin-top: -30px !important;
+    background-color: white !important;
+    border-radius: 15px !important;
+    width: 30px !important;
+    height: 30px !important;
+    opacity: 1 !important;
+}
+/*li:hover
+{
+    background-color:grey;
+}*/

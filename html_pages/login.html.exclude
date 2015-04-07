@@ -1,0 +1,45 @@
+﻿<div>
+<div>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6 col-md-6 col-sm-8 col-xs-10 col-lg-push-3 col-sm-push-3 col-xs-push-1" id="forminfo">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <span class="panel-title" >Sign in</span>
+                        <a ui-sref="forgot" style="float:right" ;font-size:small;"><i style="cursor:pointer">forgot password</i></a>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal" id="form" role="form" style="background-color:white" name="logform">
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                <input type="text" class="form-control" placeholder="name required" required name="name" ng-model="user.name" />
+                                </div><div ng-show="logform.name.$error.required && logform.name.$dirty" style="float:right"><i style="color:red">Required</i></div>
+                            <br />
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                <input type="password" placeholder="password" required class="form-control" ng-model="user.passwrd" ng-maxlength="8" ng-minlength="5" name="passwrd" />
+                            </div>
+                            <div ng-show="logform.passwrd.$error.required && logform.passwrd.$dirty" style="float:right"><i style="color:red">Required!!!</i></div>
+                            <div ng-show="logform.passwrd.$error.maxlength && logform.passwrd.$dirty" style="float:right"><i style="color:red">Too Long!!!</i></div>
+                            <div ng-show="logform.passwrd.$error.minlength && logform.passwrd.$dirty" style="float:right"><i style="color:red">Too short!!!</i></div>
+                            <br />
+                            <input type="checkbox" /><span>&nbsp;Remember me</span>
+                            <br />
+                            <br />
+                            <input type="button" class="btn btn-success form-control" id="btnhvr" value="Sign In" ng-disabled="logform.$invalid" ng-click="home()" />
+                            <br />
+                       
+                            <a ui-sref="registration" style="float:right;font-size:0.9em;cursor:pointer"><i>not a member yet</i></a>
+                        </form>
+                    </div>
+                </div>
+                <span style="font-style:italic;font-size:large;color:red;margin-bottom:60%">
+                    <marquee behavior="alternate" direction="up" width="80%" height="50"><marquee direction="right" behavior="alternate">Login here to go home page&nbsp;<span class="glyphicon glyphicon-hand-left"></span></marquee></marquee>
+                </span>
+            </div>
+        </div>             
+    </div>
+   
+</div>
+</div>
