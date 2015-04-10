@@ -128,7 +128,7 @@ angular.module('demoapp', ['ui.router']).factory('Demo', [function () {
     $scope.cod = Demo.cod,
     $scope.contact = Demo.contact,
     $scope.order = Demo.order,
-    $scope.registertitle=demo.registertitle
+    $scope.registertitle=Demo.registertitle
 
    
 
