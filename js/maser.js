@@ -20,7 +20,8 @@ angular.module('demoapp', ['ui.router']).factory('Demo', [function () {
         shipping: "Free Shipping",
         cod: "Check Pin we deliver",
         contact: "Contact us",
-        order: "OrderStatus"
+        order: "OrderStatus",
+        registertitle:"New to Bangalorestop?- Register & get 15% off*"
 
 
 
@@ -126,7 +127,8 @@ angular.module('demoapp', ['ui.router']).factory('Demo', [function () {
     $scope.shipping = Demo.shipping,
     $scope.cod = Demo.cod,
     $scope.contact = Demo.contact,
-    $scope.order = Demo.order
+    $scope.order = Demo.order,
+    $scope.registertitle=demo.registertitle
 
    
 
