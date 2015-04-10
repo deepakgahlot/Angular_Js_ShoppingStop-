@@ -15,7 +15,15 @@ angular.module('demoapp', ['ui.router']).factory('Demo', [function () {
         Access: "Accessories",                       
         kid: "Kids",                     
         gift:"Jwellery",                      
-        Brand:"FeaturedBrand"                        
+        Brand: "FeaturedBrand",
+        bangaloreTitle: "Welcome to Bangalore Shopping Stop",
+        shipping: "Free Shipping",
+        cod: "Check Pin we deliver",
+        contact: "Contact us",
+        order: "OrderStatus"
+
+
+
     };
 }]).config(['$urlRouterProvider', '$stateProvider', function ($urlRouterProvider, $stateProvider) {
     $urlRouterProvider.otherwise('/home'
@@ -113,7 +121,14 @@ angular.module('demoapp', ['ui.router']).factory('Demo', [function () {
     $scope.gift = Demo.gift,
     $scope.Brand = Demo.Brand,
     $scope.modalsign1 = "If you have an account with us,",
-     $scope.modalsign2 = "Sign in using your name."
+     $scope.modalsign2 = "Sign in using your name.",
+    $scope.bangaloreTitle = Demo.bangaloreTitle,
+    $scope.shipping = Demo.shipping,
+    $scope.cod = Demo.cod,
+    $scope.contact = Demo.contact,
+    $scope.order = Demo.order
+
+   
 
     $scope.menu = [
         {

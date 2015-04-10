@@ -28,6 +28,18 @@ button:hover
 {
     opacity:2
 }
+#my-modal
+{
+    margin-top:7%;
+}
+.carousel-indicators li.active
+{
+    background-color:red !important;
+}
+.carousel-indicators li
+{
+    background-color:black !important;
+}
 .modal-header .close {
     float: right !important;
     margin-right: -30px !important;
@@ -35,6 +47,17 @@ button:hover
     background-color: white !important;
     border-radius: 15px !important;
     width: 30px !important;
+    height: 30px !important;
+    opacity: 1 !important;
+}
+.modal-content .closee {
+    float: right !important;
+    margin-right: -17px !important;
+    margin-top: -17px !important;
+    background-color: black;
+    border-radius: 15px !important;
+    width: 30px !important;
+    color:white;
     height: 30px !important;
     opacity: 1 !important;
 }

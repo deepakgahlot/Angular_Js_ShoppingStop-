@@ -1,40 +1,51 @@
 ﻿<div ng-controller="HomeCtrl">
-    <div class="navbar navbar-default" style="padding-top:10px;background-color:#fafafa">
+    <div class="navbar navbar-default" style="padding-top:10px;background-color:#005387">
         <div class="container">
             <div class="navbar-header">
-                <div class="navbar-brand">
-                    <!--<a ui-sref="home" style="font-family:Algerian;font-size:1.5em;color:orange"><i>{{::title}}</i></a>-->
+                <!--<div class="navbar-brand">
+                    <a ui-sref="home" style="font-family:Algerian;font-size:1.5em;color:orange"><i>{{::title}}</i></a>
                     <ul>
                         <li>
-                            <a ui-sref="home" style="font-style:italic;font-weight:bold;">&nbsp;<i>{{titles}}</i></a>
+                            <a ui-sref="home" style="font-style:italic;font-weight:bold; color:white">&nbsp;<i>{{titles}}</i></a>
                         </li>
                     </ul>
 
-                </div>
+                </div>-->
+                <span style="color:white" ng-bind="bangaloreTitle"></span>
+               
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
+                    <!--<span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>-->
+                    <span class="glyphicon glyphicon-cog" style="color:white"></span>
                 </button>
             </div>
+           
             <div class="collapse navbar-collapse" id="example" style="float:right">
-                <ul class="nav navbar-nav">
-
-                    <!--<li ng-click="setIndex(1)" ng-class="(index==1) ? 'active' : ''">
-                        <a ui-sref="contact" style="font-weight:bold;" class="glyphicon glyphicon-log-in">&nbsp;<i>{{menu[1].name}}</i></a>
-                    </li>
-                    <li ng-click="setIndex(2)" ng-class="(index==2) ? 'active' : ''">
-                        <a ui-sref="log" style="font-weight:bold;" class="glyphicon glyphicon-log-in">&nbsp;<i>{{menu[2].name}}</i></a>
-                    </li>-->
-                </ul>
+                <span class="nav navbar-nav">
+                    <a ui-sref="contact" style="color:white"><small><span ng-bind="shipping"></span></small></a>&nbsp;<span style="color:white">|</span>
+                    <a ui-sref="contact" style="color:white"><small ng-bind="cod"></small></a>&nbsp;<span style="color:white">|</span>
+                    <span>
+                        <a ui-sref="contact" style="color:white;" class="glyphicon-envelope">&nbsp;<small ng-bind="contact"></small></a>&nbsp;<span style="color:white">|</span>
+                    </span>  
+                        <a ui-sref="contact" style="color:white"><small ng-bind="order"></small> </a>
+                                
+                        
+                    
+                    
+                </span>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="container">
             <div class="col-lg-3 col-sm-3 col-md-3">
-                <div style="background-color:#070406;height:45px;width:160px;padding:5%;color:whitesmoke;border-radius:10px;font-family:Algerian;" ng-bind="subtitl">
+                <div style="background-color:#070406;height:45px;width:160px;padding:5%;color:whitesmoke;border-radius:10px;font-family:Algerian;">
+
+                    <a ui-sref="home" style="color:white">{{subtitl}}</a>
                 </div>
+                <!--<a ui-sref="home"  ng-bind="subtitl">
+                </a>-->
                 <small style="padding-left:4%;font-family:Algerian;" ng-bind="caption"></small>
             </div>
             <div class="col-lg-4 ">
@@ -51,7 +62,7 @@
             </span>-->
             <span class="col-lg-4">
                 <a href="#"><small style="color:black" data-toggle="modal" data-target="#modal-1">{{signin}}</small></a><span style="padding-left:2%;">|</span>
-                <a href="#"><small style="color:black">{{regstr}}</small></a><span style="padding-left:2%">|</span>
+                <a href="#"><small style="color:black" data-toggle="modal" data-target="#modal-rgstr">{{regstr}}</small></a><span style="padding-left:2%">|</span>
                 <a href="#"><small style="color:black">{{wishlist}}</small></a>
             </span>
         </div>
@@ -93,13 +104,13 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-7" style="background-color:transparent;">
+        <div class="col-lg-10" style="background-color:transparent;">
             <div class="modal" id="modal-1">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" data-dismiss="modal" class="close">&times;</button>
-                            <a href="#" class="modal-title" style="color:black"><i>New to shoppersstop.com? - Register & get 15% off*</i></a>
+                            <a href="#" class="modal-title" style="color:black"><i>New to Bangalorestop?- Register & get 15% off*</i></a>
                         </div>
                         <div class="row">
                             <div class="col-lg-6">
@@ -113,7 +124,7 @@
                                         <div class="panel panel-info">
                                             <div class="panel-heading" style="background-color:#0a5787">
                                                 <span class="panel-title" style="color:white">Sign in</span>
-                                                <a ui-sref="forgot" style="float:right" ;font-size:small;"><i style="cursor:pointer;color:white">forgot password</i></a>
+                                                <a href="#" style="float:right;font-size:small;"><i style="cursor:pointer;color:white" data-target="#modal-forgot" data-toggle="modal" data-dismiss="modal">forgot password</i></a>
                                             </div>
                                             <div class="panel-body">
                                                 <form class="form-horizontal" id="form" role="form" style="background-color:white" name="logform">
@@ -165,4 +176,148 @@
             </div>
         </div>
     </div>
+    <div class="col-lg-5">
+        <div class="container">
+            <div class="modal" id="modal-forgot" style="padding-top:10%;height:400px;">
+
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            
+                            <button type="button" data-dismiss="modal" class="close">&times;</button>
+                            <span style="text-align:center">Forgot Your Password?</span>
+                            <span style="float:right"><small style="color:red">required field</small></span>
+                        </div>
+                    </div>
+                    <div class="modal-content">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <span>Please enter your Email address.You will receive a link to reset your password</span>
+                            </div>
+                            <div class="panel-body">
+                                <form class="form-inline" name="form">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-envelope">
+                                            </span>
+                                        </span>
+                                        <input type="email" class="form-control" placeholder="Email here" name="email" required ng-model="user.email" />
+                                    </div>
+                                    
+                                    <div ng-show="form.email.$error.required && form.email.$dirty"><small style="color:red">Email is required</small></div>
+                                    <div ng-show="form.email.$dirty && form.email.$error.email"><small style="color:red">Please enter valid email.example:johndoe@domain.com.</small></div>
+                                    <button type="button" class="btn btn-info" ng-disabled="form.$invalid">Click Me</button>
+                                </form>
+                            </div>
+                        </div>
+                       
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="col-lg-8">
+        <div class="container">
+            <div class="modal" id="modal-rgstr">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button class="close" data-dismiss="modal">&times;</button>
+                            <a href="#" style="padding-left:25%;" data-toggle="modal" data-target="#modal-1" data-dismiss="modal">Registered Already?-SignIn</a>
+                            <hr />
+                        </div>
+                       
+                            <div class="modal-content" style="padding-top:5%;">
+                                <span style="color:red;padding-left:30%;margin-bottom:4%;">Register here and get 15% off</span>
+                                <form class="form-horizontal" name="form">
+                                    
+                                    <div class="row" style="padding-top:5%;">
+                                        <div class="col-lg-5 col-lg-push-1">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-user"></span>
+                                                </span>
+                                                <input type="text" class="form-control" name="fname" placeholder="First Name*" />
+
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5 col-lg-push-1">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-user"></span>
+                                                </span>
+                                                <input type="text" class="form-control" name="lname" placeholder="Last Name*" />
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                        
+                                        <div class="row" style="padding-top:4%;">
+                                            <div class="col-lg-5 col-lg-push-1">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-envelope"></span>
+                                                    </span>
+                                                    <input type="email" class="form-control" name="fname" placeholder="Email Address*" />
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 col-lg-push-1">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-user"></span>
+                                                    </span>
+                                                    <input type="tel" class="form-control" name="fname" placeholder="Mobile*" />
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row" style="padding-top:5%;">
+                                            <div class="col-lg-5 col-lg-push-1">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-user"></span>
+                                                    </span>
+                                                    <input type="password" class="form-control" name="fname" placeholder="Password*" />
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 col-lg-push-1">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-user"></span>
+                                                    </span>
+                                                    <input type="password" class="form-control" name="fname" placeholder="Confirm Password*" />
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <div class="row" style="padding-top:2%;">
+                                        
+                                        <span class="col-lg-5 col-lg-push-6">
+                                           
+                                            <span class="radio">
+                                                <h6>Gender*</h6>
+                                                <label><input type="radio" name="radio1" style="background-color:green" />Male</label>                                                                                      
+                                                <label><input type="radio" name="radio1" />Female</label>
+                                            </span>
+                                            
+                                        </span>
+                                       
+                                    </div>
+                                    <div class="row" style="padding-top:5%;padding-bottom:2%;">
+                                        <div class="col-lg-5 col-lg-push-3">
+                                          <button type="button" class="btn btn-primary form-control">Register</button>                                                                                                                                                                                 
+                                        </div>                                       
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>    
 </div>
