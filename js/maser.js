@@ -50,6 +50,11 @@ angular.module('demoapp', ['ui.router']).factory('Demo', [function () {
         url: '/contact',
         templateUrl: 'contact.html',
         controller: 'CntctCtrl'
+    }).state('order',
+    {
+        url: '/order',
+        templateUrl: 'order.html',
+        controller:'HomeCtrl'
     })
 }]).controller('DemoCtrl', ['$scope', 'Demo', function ($scope, Demo) {
     //$scope.home = function () {
@@ -110,6 +115,8 @@ angular.module('demoapp', ['ui.router']).factory('Demo', [function () {
     }
 }).controller('HomeCtrl',['$scope','Demo',function($scope,Demo)
 {
+    $scope.odertitle = "Order Status";
+    $scope.ordersub = "To track your order, please enter your Order Number in the field provided below and click on the Submit button."
     $scope.subtitl = Demo.subtitle;
     $scope.caption = "Start Something New";
     $scope.signin = Demo.signin,
