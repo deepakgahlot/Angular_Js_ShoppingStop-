@@ -21,7 +21,9 @@ angular.module('demoapp', ['ui.router']).factory('Demo', [function () {
         cod: "Check Pin we deliver",
         contact: "Contact us",
         order: "OrderStatus",
-        registertitle:"New to Bangalorestop?- Register & get 15% off*"
+        registertitle: "New to Bangalorestop?- Register & get 15% off*",
+        CheckpinHeader: "Check PinCode We Deliver To",
+        checksubtile: "Enter PIN Code to check delivery Location and Cash on Delivery availability"
 
 
 
@@ -54,6 +56,16 @@ angular.module('demoapp', ['ui.router']).factory('Demo', [function () {
     {
         url: '/order',
         templateUrl: 'order.html',
+        controller:'HomeCtrl'
+    }).state('pinstatus',
+    {
+        url: '/pinstatus',
+        templateUrl: 'PinStatus.html',
+        controller:'HomeCtrl'
+    }).state('wishlist',
+    {
+        url: '/wishlist',
+        templateUrl: 'wishlist.html',
         controller:'HomeCtrl'
     })
 }]).controller('DemoCtrl', ['$scope', 'Demo', function ($scope, Demo) {
@@ -129,13 +141,15 @@ angular.module('demoapp', ['ui.router']).factory('Demo', [function () {
     $scope.gift = Demo.gift,
     $scope.Brand = Demo.Brand,
     $scope.modalsign1 = "If you have an account with us,",
-     $scope.modalsign2 = "Sign in using your name.",
+    $scope.modalsign2 = "Sign in using your name.",
     $scope.bangaloreTitle = Demo.bangaloreTitle,
     $scope.shipping = Demo.shipping,
     $scope.cod = Demo.cod,
     $scope.contact = Demo.contact,
     $scope.order = Demo.order,
-    $scope.registertitle=Demo.registertitle
+    $scope.registertitle = Demo.registertitle,
+    $scope.CheckpinHeader = Demo.CheckpinHeader,
+    $scope.checksubtile = Demo.checksubtile
 
    
 

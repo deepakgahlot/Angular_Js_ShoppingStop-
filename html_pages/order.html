@@ -2,10 +2,15 @@
 <div class="container">
     <h3 ng-bind="odertitle"></h3>
     <h5 ng-bind="ordersub"></h5>
-    <div class="form-inline col-lg-4">
-        <input type="text" placeholder="Enter Order Number" />
-        <button type="button" class="btn-info">Submit</button>
+    <div class="form-inline col-lg-5">
+        <input type="text" placeholder="Enter Order Number" class="form-control" />
+        <button type="button" class="btn btn-info">Submit</button>
     </div>
+    <div style="padding-top:14%;" class="col-lg-5">
+        <a ui-sref="home"><input type="button" class="btn btn-primary" value="<< Continue Shipping" /></a>
+       
+    </div>
+    
    
 </div>
 
