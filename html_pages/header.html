@@ -80,22 +80,60 @@
             <div class="collapse navbar-collapse  col-lg-offset-2" id="ex">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a ui-sref="contact" style="font-weight:bold; color:white">{{men}}<span class="glyphicon glyphicon-menu-right" style="color:white"></span></a>
+                        <a style="font-weight:bold; color:white;" ng-bind="men"></a>  
+                        <div>
+                           
+                            <div class="submenu" style="background-color:#ededed">
+                                <div class="col-lg-7">
+                                    <div class="container">
+                                        
+                                        <div class="col-lg-2">
+                                            <span style="font-weight:bold">CLOTHING</span>
+                                            <div ng-repeat="menu in getmenu">
+                                                <span>
+                                                    <a ng-bind="menu.Subtitle" class="control-label"></a>                                                    
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <span style="font-weight:bold">ACCESSORIES</span>
+                                            <div ng-repeat="menu in getmenu">
+                                                <span>
+                                                    <a ng-bind="menu.Subtitlea"></a>
+                                                </span>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-lg-2">
+                                            <img ng-src="../Images/submen.jpg" />
+                                        </div>
+                                        <div class="col-lg-2 col-lg-offset-1">
+                                            <img ng-src="../Images/dom_watch_.jpg" />
+                                        </div>
+                                        <div class="col-lg-2 col-lg-offset-1">
+                                            <img ng-src="../Images/women.jpg" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                        
+                    
+                    <li>
+                        <a ui-sref="log" style="font-weight:bold;color:white" ng-bind="women"><span class="glyphicon glyphicon-menu-right"></span></a>
                     </li>
                     <li>
-                        <a ui-sref="log" style="font-weight:bold;color:white">{{women}}<span class="glyphicon glyphicon-menu-right"></span></a>
+                        <a ui-sref="log" style="font-weight:bold;color:white" ng-bind="Access"><span class="glyphicon glyphicon-menu-right"></span></a>
                     </li>
                     <li>
-                        <a ui-sref="log" style="font-weight:bold;color:white">{{Access}}<span class="glyphicon glyphicon-menu-right"></span></a>
+                        <a ui-sref="log" style="font-weight:bold;color:white" ng-bind="Kid"><span class="glyphicon glyphicon-menu-right"></span></a>
                     </li>
                     <li>
-                        <a ui-sref="log" style="font-weight:bold;color:white">{{kid}}<span class="glyphicon glyphicon-menu-right"></span></a>
+                        <a ui-sref="log" style="font-weight:bold;color:white" ng-bind="gift"><span class="glyphicon glyphicon-menu-right"></span></a>
                     </li>
                     <li>
-                        <a ui-sref="log" style="font-weight:bold;color:white">{{gift}}<span class="glyphicon glyphicon-menu-right"></span></a>
-                    </li>
-                    <li>
-                        <a ui-sref="log" style="font-weight:bold;color:white">{{Brand}}<span class="glyphicon glyphicon-menu-right"></span></a>
+                        <a ui-sref="log" style="font-weight:bold;color:white" ng-bind="Brand"><span class="glyphicon glyphicon-menu-right"></span></a>
                     </li>
 
 

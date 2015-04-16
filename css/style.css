@@ -2,6 +2,41 @@
 opacity:0.6
  
 }
+.submenu
+{
+   position: absolute;
+  display: none;
+  padding: 5px;
+  
+}
+.submenu li
+{
+    display:block;
+
+}
+#inlinee
+{
+    display:inline !important;
+}
+
+.widtt
+{
+    width:30%;
+}
+  li:hover .submenu
+{
+    display:inline;
+   overflow:auto;
+   top:auto;
+   z-index:3;
+   background-color:#ffffff;
+}
+  .submenu  a:hover
+  {
+      background-color:red;
+      cursor:pointer;
+      color:white;
+  }
 
 #forminfo
 {    

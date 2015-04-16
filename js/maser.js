@@ -9,12 +9,12 @@ angular.module('demoapp', ['ui.router']).factory('Demo', [function () {
         subtitle: "BANGALORE STOP",
         signin: "SignIn",
         register: "Register and get 15% off*",
-        wishlist: "My Wishlist",                                               
-        men: "Mens",                        
-        women: "Womens",                       
-        Access: "Accessories",                       
-        kid: "Kids",                     
-        gift:"Jwellery",                      
+        wishlist: "My Wishlist",
+        men: "Mens",
+        women: "Womens",
+        Access: "Accessories",
+        kid: "Kids",
+        gift: "Jwellery",
         Brand: "FeaturedBrand",
         bangaloreTitle: "Welcome to Bangalore Shopping Stop",
         shipping: "Free Shipping",
@@ -56,17 +56,17 @@ angular.module('demoapp', ['ui.router']).factory('Demo', [function () {
     {
         url: '/order',
         templateUrl: 'order.html',
-        controller:'HomeCtrl'
+        controller: 'HomeCtrl'
     }).state('pinstatus',
     {
         url: '/pinstatus',
         templateUrl: 'PinStatus.html',
-        controller:'HomeCtrl'
+        controller: 'HomeCtrl'
     }).state('wishlist',
     {
         url: '/wishlist',
         templateUrl: 'wishlist.html',
-        controller:'HomeCtrl'
+        controller: 'HomeCtrl'
     })
 }]).controller('DemoCtrl', ['$scope', 'Demo', function ($scope, Demo) {
     //$scope.home = function () {
@@ -121,12 +121,11 @@ angular.module('demoapp', ['ui.router']).factory('Demo', [function () {
 
 }]).directive('homeDirec', function () {
     return {
-        restrict:'E',
+        restrict: 'E',
         templateUrl: "../html_pages/homemaster.html",
-        controller:"HomeCtrl"
+        controller: "HomeCtrl"
     }
-}).controller('HomeCtrl',['$scope','Demo',function($scope,Demo)
-{
+}).controller('HomeCtrl', ['$scope', 'Demo', '$http', function ($scope, Demo, $http) {
     $scope.odertitle = "Order Status";
     $scope.ordersub = "To track your order, please enter your Order Number in the field provided below and click on the Submit button."
     $scope.subtitl = Demo.subtitle;
@@ -149,9 +148,12 @@ angular.module('demoapp', ['ui.router']).factory('Demo', [function () {
     $scope.order = Demo.order,
     $scope.registertitle = Demo.registertitle,
     $scope.CheckpinHeader = Demo.CheckpinHeader,
-    $scope.checksubtile = Demo.checksubtile
+    $scope.checksubtile = Demo.checksubtile;
 
-   
+
+    $http.get('../js/submenu.json').success(function (response) {
+        $scope.getmenu = response;
+    });
 
     $scope.menu = [
         {
@@ -165,13 +167,13 @@ angular.module('demoapp', ['ui.router']).factory('Demo', [function () {
         },
     {
         list: "Track your orders"
-}
+    }
     ]
 }
-]).directive('homeDetail',function()
-{
+]).directive('homeDetail', function () {
     return {
         restrict: 'E',
-        templateUrl:'../html_pages/Homedetails.html'
+        templateUrl: '../html_pages/Homedetails.html'
     }
 })
+   
