@@ -1,0 +1,12 @@
+﻿
+[
+   
+     {
+        "mainImages": "../SubImages/womenmain.jpg"        
+    },
+    {
+         "womenImages": "../SubImages/women1.jpg",
+         "title": "Stop",
+         "Subtitle": "Start at 499 only"
+    }
+]

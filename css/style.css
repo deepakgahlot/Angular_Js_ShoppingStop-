@@ -31,18 +31,19 @@ opacity:0.6
    z-index:3;
    background-color:#ffffff;
 }
-  ul li  a:hover
+  a
   {
-      background-color:white;
+      font-style:italic;
   }
-  .submenu  a
+  
+  .submenu a 
   {
      text-decoration:none;
       font-style:italic;
       cursor:pointer;
       color:green;
   }
-
+  
 #forminfo
 {    
   margin-top:50px;       

@@ -67,6 +67,11 @@ angular.module('demoapp', ['ui.router']).factory('Demo', [function () {
         url: '/wishlist',
         templateUrl: 'wishlist.html',
         controller: 'HomeCtrl'
+    }).state('women',
+    {
+        url: '/women',
+        templateUrl: 'womendetail.html',
+        controller: 'ImagesCtrl'
     })
 }]).controller('DemoCtrl', ['$scope', 'Demo', function ($scope, Demo) {
     //$scope.home = function () {
@@ -175,5 +180,65 @@ angular.module('demoapp', ['ui.router']).factory('Demo', [function () {
         restrict: 'E',
         templateUrl: '../html_pages/Homedetails.html'
     }
-})
+}).controller('ImagesCtrl',['$scope','$http',function($scope,$http)
+{
+    $scope.womenimg=
+        [
+            {
+                name: 'Stop',
+                Imagename: 'women1',
+                subtitle: "Start at 499 only"
+            },
+            {
+                name: 'Haut Curry',
+                Imagename: 'women2',
+                subtitle: "upto 65% off-view all"
+            },
+            {
+                name: 'Imara',
+                Imagename: 'women3',
+                subtitle: "New Arrival-view all"
+            },
+            {
+                name: 'Life',
+                Imagename: 'women4',
+                subtitle: "upto 72% off"
+            },
+           {
+               name: 'Arrow Women',
+               Imagename: 'women5',
+               subtitle: "New Arrival"
+           },
+           {
+               name: 'Imara',
+               Imagename: 'women6',
+               subtitle: "Start at 499 only"
+           },
+            
+        ]
+    $scope.womenimg2 =
+       [
+           {
+               name: 'Life',
+               Imagename: 'women4',
+               subtitle: "upto 72% off"
+           },
+           {
+               name: 'Arrow Women',
+               Imagename: 'women5',
+               subtitle: "New Arrival"
+           },
+           {
+               name: 'Imara',
+               Imagename: 'women6',
+               subtitle: "Start at 499 only"
+           },
+
+       ]
+
+    $http.get('../js/submenu.json').success(function (response) {
+        $scope.getmenu = response;
+    });
+}
+])
    
