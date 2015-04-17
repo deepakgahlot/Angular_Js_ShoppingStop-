@@ -35,11 +35,12 @@ opacity:0.6
   {
       background-color:white;
   }
-  .submenu  a:hover
+  .submenu  a
   {
-      background-color:red;
+     text-decoration:none;
+      font-style:italic;
       cursor:pointer;
-      color:white;
+      color:green;
   }
 
 #forminfo

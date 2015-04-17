@@ -80,15 +80,15 @@
             <div class="collapse navbar-collapse  col-lg-offset-2" id="ex">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a style="font-weight:bold; color:white;" ng-bind="men"></a>  
-                        <div>
-                           
+                        <a style="font-weight:bold; color:white;cursor:pointer" ng-bind="men"></a>  
+                        <div>   
+                            <!-- Add submenu items for Mens -->                       
                             <div class="submenu" style="background-color:#ededed">
-                                <div class="col-lg-7">
+                                <div class="col-lg-5">
                                     <div class="container">
                                         
                                         <div class="col-lg-2">
-                                            <span style="font-weight:bold">CLOTHING</span>
+                                            <span style="font-weight:bold;color:orangered;">CLOTHING</span>
                                             <div ng-repeat="menu in getmenu">
                                                 <span>
                                                     <a ng-bind="menu.Subtitle" class="control-label"></a>                                                    
@@ -96,7 +96,7 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-2">
-                                            <span style="font-weight:bold">ACCESSORIES</span>
+                                            <span style="font-weight:bold;color:orangered;">ACCESSORIES</span>
                                             <div ng-repeat="menu in getmenu">
                                                 <span>
                                                     <a ng-bind="menu.Subtitlea"></a>
@@ -117,23 +117,168 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- Closing Submenu Items for Mens -->
                         </div>    
                         
                     
                     <li>
-                        <a ui-sref="log" style="font-weight:bold;color:white" ng-bind="women"><span class="glyphicon glyphicon-menu-right"></span></a>
+                        <a style="font-weight:bold;color:white;cursor:pointer" ng-bind="women"></a>
+                        <div>
+                            <!-- Add submenu items for Women -->
+                            <div class="submenu">
+                                <div class="col-lg-5">
+                                    <div class="container">
+
+                                        <div class="col-lg-2">
+                                            <span style="font-weight:bold;color:orangered;">CLOTHING</span>
+                                            <div ng-repeat="menu1 in getmenu">
+                                                <span>
+                                                    <a ng-bind="menu1.Somen"></a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <span style="font-weight:bold;color:orangered;">ACCESSORIES</span>
+                                            <div ng-repeat="menu in getmenu">
+                                                <span>
+                                                    <a ng-bind="menu.Subtitlea"></a>
+                                                </span>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-lg-2">
+                                            <img ng-src="../Images/submen.jpg" />
+                                        </div>
+                                        <div class="col-lg-2 col-lg-offset-1">
+                                            <img ng-src="../Images/dom_watch_.jpg" />
+                                        </div>
+                                        <div class="col-lg-2 col-lg-offset-1">
+                                            <img ng-src="../Images/women.jpg" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Closing Submenu Items for Women -->
+                        </div>    
                     </li>
                     <li>
-                        <a ui-sref="log" style="font-weight:bold;color:white" ng-bind="Access"><span class="glyphicon glyphicon-menu-right"></span></a>
+                        <a style="font-weight:bold;color:white;cursor:pointer" ng-bind="Access"></a>
+                        <div>
+                            <!-- Add submenu items for Accessories -->
+                            <div class="submenu">
+                                <div class="col-lg-5">
+                                    <div class="container">
+
+                                        <div class="col-lg-2">
+                                            <span style="font-weight:bold;color:orangered;">CLOTHING</span>
+                                            <div ng-repeat="menu in getmenu">
+                                                <span>
+                                                    <a ng-bind="menu.Subtitle" class="control-label"></a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <span style="font-weight:bold;color:orangered;">ACCESSORIES</span>
+                                            <div ng-repeat="menu in getmenu">
+                                                <span>
+                                                    <a ng-bind="menu.Subtitlea"></a>
+                                                </span>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-lg-2">
+                                            <img ng-src="../Images/submen.jpg" />
+                                        </div>
+                                        <div class="col-lg-2 col-lg-offset-1">
+                                            <img ng-src="../Images/dom_watch_.jpg" />
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Closing Submenu Items for Accessories -->
+                        </div>
+                    </li>                   
+                    <li>
+                        <a style="font-weight:bold;color:white;cursor:pointer" ng-bind="gift"></a>
+                        <div>
+                            <!-- Add submenu items for Jwellery -->
+                            <div class="submenu">
+                                <div class="col-lg-5">
+                                    <div class="container">
+
+                                        <div class="col-lg-2">
+                                            <span style="font-weight:bold;color:orangered;">CLOTHING</span>
+                                            <div ng-repeat="menu in getmenu">
+                                                <span>
+                                                    <a ng-bind="menu.Subtitle" class="control-label"></a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <span style="font-weight:bold;color:orangered;">ACCESSORIES</span>
+                                            <div ng-repeat="menu in getmenu">
+                                                <span>
+                                                    <a ng-bind="menu.Subtitlea"></a>
+                                                </span>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-lg-2">
+                                            <img ng-src="../Images/submen.jpg" />
+                                        </div>
+                                        <div class="col-lg-2 col-lg-offset-1">
+                                            <img ng-src="../Images/dom_watch_.jpg" />
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Closing Submenu Items for Jwellery -->
+                        </div>
                     </li>
                     <li>
-                        <a ui-sref="log" style="font-weight:bold;color:white" ng-bind="Kid"><span class="glyphicon glyphicon-menu-right"></span></a>
-                    </li>
-                    <li>
-                        <a ui-sref="log" style="font-weight:bold;color:white" ng-bind="gift"><span class="glyphicon glyphicon-menu-right"></span></a>
-                    </li>
-                    <li>
-                        <a ui-sref="log" style="font-weight:bold;color:white" ng-bind="Brand"><span class="glyphicon glyphicon-menu-right"></span></a>
+                        <a style="font-weight:bold;color:white;cursor:pointer" ng-bind="Brand"></a>
+                        <div>
+                            <!-- Add submenu items for Feature Brands -->
+                            <div class="submenu">
+                                <div class="col-lg-5">
+                                    <div class="container">
+
+                                        <div class="col-lg-2">
+                                            <span style="font-weight:bold;color:orangered;">CLOTHING</span>
+                                            <div ng-repeat="menu in getmenu">
+                                                <span>
+                                                    <a ng-bind="menu.Subtitle" class="control-label"></a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <span style="font-weight:bold;color:orangered;">ACCESSORIES</span>
+                                            <div ng-repeat="menu in getmenu">
+                                                <span>
+                                                    <a ng-bind="menu.Subtitlea"></a>
+                                                </span>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-lg-2">
+                                            <img ng-src="../Images/submen.jpg" />
+                                        </div>
+                                        <div class="col-lg-2 col-lg-offset-1">
+                                            <img ng-src="../Images/dom_watch_.jpg" />
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Closing Submenu Items for Feature Brands -->
+                        </div>
+
                     </li>
 
 
