@@ -3,8 +3,8 @@
         
             <div ng-repeat="detail in getdata">
                 <div class="col-lg-4">
-                    <h3 style="font-family:Algerian;color:blueviolet;"><i>{{detail.title}}</i></h3><br />
-                    <small>{{detail.subtitle}}</small>
+                    <h3 style="font-family:Algerian;color:blueviolet;" ng-bind="detail.title"><i></i></h3><br />
+                    <small ng-bind="detail.subtitle"></small>
                    
 
 
@@ -17,13 +17,13 @@
             <div class="container">  
                 <div>
                     <div style="background-color:black; height:auto; width:auto;padding-top:2%; padding-bottom:3%;border-radius:20px;" class="col col-lg-2 col-xs-2">
-                        <span style="color:#005387">{{title1}} {{order}}<span>&nbsp;&nbsp;<input type="button" class="btn btn-primary" value="Order Now" /></span></span>
+                        <span style="color:#005387" ng-bind="title order"><span>&nbsp;&nbsp;<input type="button" class="btn btn-primary" value="Order Now" /></span></span>
 
                     </div>
                 </div> 
                 <div>
                     <div style="background-color:black; height:auto; width:auto;padding-top:2%; padding-bottom:3%;border-radius:20px;" class="col-lg-offset-1 col-lg-2 col-xs-2">
-                        <span style="color:#005387">{{title2}} {{order1}}<span>&nbsp;&nbsp;<input type="button" class="btn btn-primary" value="Feedback" /></span></span>
+                        <span style="color:#005387" ng-bind="title2 order1"><span>&nbsp;&nbsp;<input type="button" class="btn btn-primary" value="Feedback" /></span></span>
 
 
                     </div>
@@ -61,8 +61,8 @@
                     
                     <div style="margin-top:-10%">
                         <div ng-repeat="detail in getdata">
-                            <h3 style="color:blue">{{detail.question}}</h3><br />
-                            <span>{{detail.Answer}}</span>
+                            <h3 style="color:blue" ng-bind="detail.question"></h3><br />
+                            <span ng-bind="detail.Answer"></span>
                         </div>
                     </div>
                    

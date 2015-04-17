@@ -15,11 +15,11 @@
        
     </style>
 </head>
-<body ng-app="demoapp" style="width: auto;background-color:#f7f5ee" ng-controller="DemoCtrl">
-     <!--<div ng-include src="html_pages/header.html">
-     </div>-->
+ <!-- Start the angular js scope -->
+<body ng-app="demoapp" style="width: auto;background-color:#f7f5ee" ng-controller="DemoCtrl">     
     <div ng-include ="'header.html'"></div>
-        <!-- Start the angular js scope -->
+       
+    <!-- start of ui-router -->
         <ui-view></ui-view> 
     <div id="my-modal" class="modal fade">
         <div class="modal-dialog">           
@@ -35,4 +35,5 @@
         <script src="../Scripts/angular-ui-router.js"></script>
         <script src="../js/maser.js"></script>
 </body>
+<!-- End of angular js scope -->
 </html>
