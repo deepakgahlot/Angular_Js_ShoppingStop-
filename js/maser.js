@@ -1,4 +1,4 @@
-﻿/// <reference path="../Scripts/angular.min.js" />
+﻿<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
 
 
 angular.module('demoapp', ['ui.router']).factory('Demo', [function () {
@@ -49,7 +49,7 @@ angular.module('demoapp', ['ui.router']).factory('Demo', [function () {
 
     }).state('contact',
     {
-        url: '/contact',
+        url: '/contact123',
         templateUrl: 'contact.html',
         controller: 'CntctCtrl'
     }).state('order',
@@ -71,6 +71,11 @@ angular.module('demoapp', ['ui.router']).factory('Demo', [function () {
     {
         url: '/women',
         templateUrl: 'womendetail.html',
+        controller: 'ImagesCtrl'
+    }).state('men',
+    {
+        url: '/men',
+        templateUrl: 'men.html',
         controller: 'ImagesCtrl'
     })
 }]).controller('DemoCtrl', ['$scope', 'Demo', function ($scope, Demo) {
@@ -216,21 +221,36 @@ angular.module('demoapp', ['ui.router']).factory('Demo', [function () {
            },
             
         ]
-    $scope.womenimg2 =
+    $scope.menimg =
        [
            {
                name: 'Life',
-               Imagename: 'women4',
+               Imagename: 'men1',
                subtitle: "upto 72% off"
            },
            {
                name: 'Arrow Women',
-               Imagename: 'women5',
+               Imagename: 'men2',
                subtitle: "New Arrival"
            },
            {
                name: 'Imara',
-               Imagename: 'women6',
+               Imagename: 'men3',
+               subtitle: "Start at 499 only"
+           },
+            {
+                name: 'Life',
+                Imagename: 'men4',
+                subtitle: "upto 72% off"
+            },
+           {
+               name: 'Arrow Women',
+               Imagename: 'men5',
+               subtitle: "New Arrival"
+           },
+           {
+               name: 'Imara',
+               Imagename: 'men6',
                subtitle: "Start at 499 only"
            },
 
